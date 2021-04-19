@@ -1,3 +1,12 @@
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 body, html {
     height: 100%;
     --standard: #dcddde;
@@ -7,14 +16,16 @@ body {
     font: 16pt sans-serif;
     text-align: center;
     margin: 0;
-    background: url('bg.jpg');
+    background-color: rgb(32,34,37);
+    background-image: url('bg.jpg');
     background-size: cover;
     background-position: bottom;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    animation: opacity 750ms;
 }
 
 header {
-    background: rgb(32,34,37);
+    background-color: rgb(32,34,37);
     padding: 1em;
 }
 
@@ -39,4 +50,10 @@ header img {
 a, a:visited {
     background: bold;
     color: var(--standard);
+}
+
+body > p {
+    animation: opacity 750ms;
+    animation-delay: 750ms;
+    animation-fill-mode: backwards;
 }
